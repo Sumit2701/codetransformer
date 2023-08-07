@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import styles from '../app/globals.css';
+import down from '../components/Assets/down.svg'
 import { useState } from 'react';
 
 export default function Home() {
@@ -41,7 +42,7 @@ export default function Home() {
       <div className='md:flex md:w-1/2 justify-between items-center  md:mx-16  mt-5  md:h-20'>
       <div className='flex  md:w-full justify-center '>
       <div
-        className='border-black  border-4  md:h-20  md:w-full  flex bg-gray-300   justify-center items-center  '
+        className='border-black  border-4  md:h-20 w-1/2 md:w-full  flex bg-gray-300   justify-center items-center  '
         
       >
         <button className='  text-xs md:text-2xl ' id='api'>
@@ -60,11 +61,12 @@ export default function Home() {
       >
         <div className='relative'>
           <button
-            className='text-base md:text-2xl uppercase'
+            className='text-base md:text-2xl uppercase items-center flex'
             onClick={toggleDropdown}
             id='api'
           >
             {gpt}
+            <Image src={down} className='w-5 m-2'/>
           </button>
           {showDropdown && (
             <div className='absolute mt-2'>

@@ -18,7 +18,7 @@ export const Navbar = () => {
     <div>
       <div className="flex justify-between ">
         <div
-          className="w-full md:w-11/12 mx-auto flex px-5 border-black border-4"
+          className="w-full  md:w-11/12 mx-auto flex px-5 border-black border-4"
           style={{ backgroundColor: '#F6F6F6',
         }}
         >
