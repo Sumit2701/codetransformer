@@ -21,9 +21,11 @@ export default function Home() {
     setGpt(gpt === 'gpt3.5' ? 'gpt4' : 'gpt3.5');
   };
 
-  return (<div className='  '  id='api'> 
+  return (<div className='  '   id='api'> 
     <div className='  md:flex     uppercase' id='api'>
 
+{/// do not below above this
+}
 
      <div
         className='border-black border-4 md:h-20 md:mx-16 mx-auto md:w-1/2  flex justify-center items-center mt-5  '
@@ -92,11 +94,16 @@ export default function Home() {
       
       
       </div>
-      <div className='flex w-full'>
-        <div>
+{/// do not change above this
+}
+
+
+ <div className='md:mx-16   '>
+      <div className='md:flex w-full justify-between'>
+        <div className='md:w-1/2 mx-auto md:mr-4'>
             <div>
             <div
-        className='border-black border-4 h-10  flex justify-center items-center mt-5 mx-2'
+        className='border-black border-4 h-10  flex justify-center items-center mt-5 '
         style={{
           backgroundColor: '#F6F6F6',
         }}
@@ -130,12 +137,55 @@ export default function Home() {
         </div>
       </div>
             </div>
-            <div></div>
+           
         </div>
-        
+       
+        <div className='md:w-1/2 mx-auto md:ml-4'>
+ <div>
+            <div
+        className='border-black border-4 h-10  flex justify-center items-center mt-5 '
+        style={{
+          backgroundColor: '#F6F6F6',
+        }}
+      >
+        <div className='relative'>
+          <button
+            className='text-base md:text-2xl uppercase'
+            onClick={toggleDropdown}
+            id='api'
+          >
+            {gpt}
+          </button>
+          {showDropdown && (
+            <div className='absolute mt-2'>
+              <ul className='bg-white border rounded shadow-md'>
+                <li
+                  className='cursor-pointer px-4 py-2 hover:bg-gray-100'
+                  onClick={() => handleDropdownClick('gpt3.5')}
+                >
+                  gpt3.5
+                </li>
+                <li
+                  className='cursor-pointer px-4 py-2 hover:bg-gray-100'
+                  onClick={() => handleDropdownClick('gpt4')}
+                >
+                  gpt4
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
-   
-   
-    </div>
+            </div>
+            <div>
+
+
+
+            </div>
+        </div>
+      </div>
+      </div>
+      </div>
+ 
   );
 }
