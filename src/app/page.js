@@ -180,7 +180,7 @@ export default function Home() {
             <Image src={down} className='w-5 m-2'/>
           </button>
           {showDropdown && (
-            <div className='absolute mt-2'>
+            <div className='absolute mt-2 z-50'>
               <ul className='bg-white border rounded shadow-md'>
                 <li
                   className='cursor-pointer px-4 py-2 hover:bg-gray-100'
@@ -252,7 +252,7 @@ export default function Home() {
         <div className='md:w-1/2 mx-auto md:ml-4'>
  <div>
             <div
-        className='  h-10  flex justify-center items-center mt-5 '
+        className='h-10  flex justify-center items-center mt-5 '
         style={{
           backgroundColor: '#F6F6F6',
         }}

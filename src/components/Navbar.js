@@ -22,7 +22,7 @@ export const Navbar = () => {
           style={{ backgroundColor: '#F6F6F6',
         }}
         >
-          <div className="w-8 md:w-full my-2 md:mr-60  flex items-center ">
+          <div className="w-8 md:w-full my-2 md:mr-36  flex items-center ">
             <Image src={logo} alt="" />
             <h1 className="text-base md:text-3xl mx-3 whitespace-nowrap   " style={{textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
               CODE TRANSFORMER
@@ -31,19 +31,19 @@ export const Navbar = () => {
           <div className="w-8 md:w-full invisible md:visible my-2 md:mx-10 flex items-center">
             <Image src={laptop} alt="" />
             <h1 className="text-base md:text-xl whitespace-nowrap">
-              VIEW REPO
+             <a href='https://github.com/Sumit2701/codetransformer' target='blank'> VIEW REPO</a>
             </h1>
           </div>
           <div className="w-8 md:w-full invisible md:visible my-2 md:mx-10 flex items-center">
             <Image src={design} alt="" />
             <h1 className="text-base md:text-xl whitespace-nowrap">
-              VIEW DESIGN
+             <a href='https://www.figma.com/file/7ZmDGgYVcvZ3xXZCWaVDd8/Code-Transformer-by-SumitAhire-powered-by-openai?type=design&node-id=0%3A1&mode=design&t=9OXhOWT1Fk3Gtq1S-1' target='blank'> VIEW DESIGN</a>
             </h1>
           </div>
           <div className="w-8 md:w-full invisible md:visible my-2  md:mx-10 flex items-center">
             <Image src={profile} alt="" />
             <h1 className="text-base md:text-xl whitespace-nowrap">
-              CHECK  PORTFOLIO
+                PORTFOLIO
             </h1>
           </div>
         </div>
@@ -57,10 +57,9 @@ export const Navbar = () => {
         </div>
       </div>
       {/* Mobile Nav Button */}
-      {/* Additional Divs for Mobile */}
-      <div className="md:hidden" style={{ position: 'relative' }}>
+      <div className="md:hidden z-50" style={{ position: 'relative' }}>
   {showMobileNav && (
-    <div className="absolute right-0 flex flex-col items-end p-5 border-4 ">
+    <div className="absolute right-0 flex flex-col items-end p-5 border-4 backdrop-blur bg-opacity-20	 bg-gray-200">
       <button className="py-4 px-5 flex items-center hover:bg-gray-300 focus:outline-none">
         <Image src={laptop} alt="" />
         <h1 className="text-base md:text-xl whitespace-nowrap">
