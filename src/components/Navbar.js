@@ -16,38 +16,38 @@ export const Navbar = () => {
 
   return (
     <div>
-      <div className="flex justify-between ">
+      <div className="flex justify-around ">
         <div
-          className="w-full  md:w-11/12 mx-auto flex px-5 border-black border-4"
+          className="w-full  sm:w-11/12 mx-auto flex  border-black border-4 justify-around"
           style={{ backgroundColor: '#F6F6F6',
         }}
         >
-          <div className="w-8 md:w-full my-2 md:mr-36  flex items-center ">
-            <Image src={logo} alt="" />
-            <h1 className="text-base md:text-3xl mx-3 whitespace-nowrap   " style={{textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
+          <div className="w-4 sm:w-full my-1 sm:mr-36  flex items-center ">
+            <Image src={logo} alt="" className='w-[40px]' />
+            <h1 className="text-base sm:text-xl mx-3 whitespace-nowrap   " style={{textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
               CODE TRANSFORMER
             </h1>
           </div>
-          <div className="w-8 md:w-full invisible md:visible my-2 md:mx-10 flex items-center">
+          <div className="w-8 sm:w-full invisible sm:visible my-2 sm:mx-10 flex items-center">
             <Image src={laptop} alt="" />
-            <h1 className="text-base md:text-xl whitespace-nowrap">
+            <h1 className="text-base  whitespace-nowrap">
              <a href='https://github.com/Sumit2701/codetransformer' target='blank'> VIEW REPO</a>
             </h1>
           </div>
-          <div className="w-8 md:w-full invisible md:visible my-2 md:mx-10 flex items-center">
+          <div className="w-8 sm:w-full invisible sm:visible my-2 sm:mx-10 flex items-center">
             <Image src={design} alt="" />
-            <h1 className="text-base md:text-xl whitespace-nowrap">
-             <a href='https://www.figma.com/file/7ZmDGgYVcvZ3xXZCWaVDd8/Code-Transformer-by-SumitAhire-powered-by-openai?type=design&node-id=0%3A1&mode=design&t=9OXhOWT1Fk3Gtq1S-1' target='blank'> VIEW DESIGN</a>
+            <h1 className="text-base sm:text-xl whitespace-nowrap">
+             <a href='https://www.figma.com/file/7ZsmGgYVcvZ3xXZCWaVDd8/Code-Transformer-by-SumitAhire-powered-by-openai?type=design&node-id=0%3A1&mode=design&t=9OXhOWT1Fk3Gtq1S-1' target='blank'> VIEW DESIGN</a>
             </h1>
           </div>
-          <div className="w-8 md:w-full invisible md:visible my-2  md:mx-10 flex items-center">
+          <div className="w-8 sm:w-full invisible sm:visible my-2  sm:mx-10 flex items-center">
             <Image src={profile} alt="" />
-            <h1 className="text-base md:text-xl whitespace-nowrap">
+            <h1 className="text-base sm:text-xl whitespace-nowrap">
                 PORTFOLIO
             </h1>
           </div>
         </div>
-        <div className="md:hidden flex items-center border-4" style={{ backgroundColor: '#F6F6F6' }}>
+        <div className="sm:hidden flex items-center border-4" style={{ backgroundColor: '#F6F6F6' }}>
           <button
             className=" font-bold py-3 px-4"
             onClick={toggleMobileNav}
@@ -57,24 +57,24 @@ export const Navbar = () => {
         </div>
       </div>
       {/* Mobile Nav Button */}
-      <div className="md:hidden z-50" style={{ position: 'relative' }}>
+      <div className="sm:hidden z-50" style={{ position: 'relative' }}>
   {showMobileNav && (
     <div className="absolute right-0 flex flex-col items-end p-5 border-4 backdrop-blur bg-opacity-20	 bg-gray-200">
       <button className="py-4 px-5 flex items-center hover:bg-gray-300 focus:outline-none">
         <Image src={laptop} alt="" />
-        <h1 className="text-base md:text-xl whitespace-nowrap">
+        <h1 className="text-base sm:text-xl whitespace-nowrap">
           <span className="hover:underline">VIEW REPO</span>
         </h1>
       </button>
       <button className="py-4 px-5 flex items-center hover:bg-gray-300 focus:outline-none">
         <Image src={design} alt="" />
-        <h1 className="text-base md:text-xl whitespace-nowrap">
+        <h1 className="text-base sm:text-xl whitespace-nowrap">
           <span className="hover:underline">VIEW DESIGN</span>
         </h1>
       </button>
       <button className="py-4 px-3 flex items-center hover:bg-gray-300 focus:outline-none">
         <Image src={profile} alt="" className="w-8" />
-        <h1 className="text-base md:text-xl whitespace-nowrap">
+        <h1 className="text-base sm:text-xl whitespace-nowrap">
           <span className="hover:underline">SEE PORTFOLIO</span>
         </h1>
       </button>
