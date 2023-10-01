@@ -15,6 +15,7 @@
     "autoprefixer": "10.4.14",
     "axios": "^1.5.1",
     "codemirror": "^6.0.1",
+    "dotenv": "^16.3.1",
     "endent": "^2.1.0",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",

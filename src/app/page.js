@@ -99,36 +99,39 @@ export default function Home() {
   // };
 
   const handleTranslate = async () => {
-    let prompt = {
-      prompt: {
-        text: `please translate this code from ${inputLanguage} to ${outputLanguage} , code is as follow ${inputCode} and i dont want any single comment in the code and dont mention the language`,
-      },
+    const body = {
+      inputLanguage,
+      outputLanguage,
+      inputCode,
     };
+  
+    try {
+      const response = await fetch('/api', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+  
+      if (response.ok) {
+        const data = await response.json();
+        // Process the data as needed, e.g., setOutputCode(data.candidates[0].output);
+        setOutputCode(data.candidates[0].output)
+      } else {
+        setLoading(false);
+        console.error('API request failed with status:', response.status);
+        alert('Something went wrong.');
+      }
+    } catch (error) {
+      setLoading(false);
+      console.error('Error:', error);
+      alert('Something went wrong.');
+    }
+  };
+  
+ 
 
-    axios
-      .post(
-        "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=AIzaSyDBZ8-fQ3fNImCFvR_b6dUeVK3bIPzIXpg",
-        prompt
-      )
-      .then((response) => setOutputCode(response.data.candidates[0].output));
-  };
-
-  const handleDropdownClick = (value) => {
-    setModel(value);
-    setShowDropdown(false); // Hide the dropdown after selection
-  };
-
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-  const copyToClipboard = (text) => {
-    const el = document.createElement("textarea");
-    el.value = text;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand("copy");
-    document.body.removeChild(el);
-  };
 
   useEffect(() => {
     if (hasTranslated) {
@@ -140,7 +143,7 @@ export default function Home() {
       
       <div className=" justify-center " id="api">
         <div className=" flex my-3 ">
-  <button className="border-4  w-1/2 mx-auto" id="api" onClick={() => handleTranslate()}>
+  <button className="border-4 bg-gray-300 shadow-md my-2 py-1 w-1/2 mx-auto" id="api" onClick={() => handleTranslate()}>
     TRANSLATE
   </button></div>
      
