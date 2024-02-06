@@ -42,9 +42,9 @@ export const Navbar = () => {
           </div>
           <div className="w-8 sm:w-full invisible sm:visible my-2  sm:mx-10 flex items-center">
             <Image src={profile} alt="" />
-            <h1 className="text-base sm:text-xl whitespace-nowrap">
+            <a href='https://sumitahire.vercel.app/' className="text-base sm:text-xl whitespace-nowrap">
                 PORTFOLIO
-            </h1>
+            </a>
           </div>
         </div>
         <div className="sm:hidden flex items-center border-4" style={{ backgroundColor: '#F6F6F6' }}>
