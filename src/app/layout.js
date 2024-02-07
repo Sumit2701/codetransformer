@@ -2,6 +2,8 @@ import './globals.css'
 import { Barlow } from 'next/font/google'
 import { Navbar } from '@/components/Navbar'
 import Head from 'next/head'
+import { Analytics } from '@vercel/analytics/react';
+
 const inter = Barlow({ subsets: ['latin'] ,
 weight:['300','400','500']})
 export const metadata = {
@@ -25,7 +27,10 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <Navbar/>
-        {children}</body>
+        {children}
+        <Analytics />
+
+        </body>
     </html>
   )
 }
